@@ -27,19 +27,19 @@
 				{
 					"name": "@electron-forge/maker-dmg",
 					"config": {
-						"icon": "./asset/icon.png"
+						"icon": "./assets/icon.png"
 					}
 				},
 				{
 					"name": "@electron-forge/maker-deb",
 					"config": {
-						"icon": "./asset/icon.png"
+						"icon": "./assets/icon.png"
 					}
 				},
 				{
 					"name": "@electron-forge/maker-squirrel",
 					"config": {
-						"iconUrl": "./asset/icon.png"
+						"iconUrl": "./assets/icon.png"
 					}
 				}
 			]
