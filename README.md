@@ -4,7 +4,7 @@ Meet the new character of Mario. Get started now and take control of your charac
 <br />
 
 ## Demo
-<img src="https://raw.githubusercontent.com/edward-joseph/mario-game/main/assets/demo.mkv" alt="demo" style="width: 640px;"/>
+<img src="https://raw.githubusercontent.com/edward-joseph/mario-game/main/assets/demo.gif" alt="demo" style="width: 640px;"/>
 
 <br />
 
