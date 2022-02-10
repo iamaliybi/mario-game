@@ -1,0 +1,101 @@
+:root {
+  --app-background: rgb(44, 49, 60);
+  --app-border: rgb(52, 59, 72);
+  --app-active: rgb(79, 159, 238);
+  --app-content: rgb(148, 154, 167);
+  --app-primary: rgb(39, 44, 54);
+  --app-primary-dark: rgb(27, 29, 35); }
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  direction: ltr;
+  background-color: var(--app-background);
+  color: var(--app-content);
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  font-size: 1.4rem;
+  font-family: "Poppins", "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+
+ul {
+  font-size: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer; }
+
+a,
+input,
+textarea,
+button {
+  outline: none; }
+
+#header {
+  background-color: var(--app-primary); }
+  #header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 0 0 0 16px; }
+    #header .header-inner .title > h1 {
+      font-size: 14px;
+      font-weight: 500; }
+    #header .header-inner .moveable {
+      flex: 1;
+      height: 100%;
+      cursor: default;
+      -webkit-app-region: drag; }
+      #header .header-inner .moveable:active {
+        cursor: grabbing; }
+    #header .header-inner .action ul {
+      display: flex; }
+      #header .header-inner .action ul li > button {
+        width: 48px;
+        height: 48px;
+        color: var(--app-content);
+        background: transparent scroll no-repeat center;
+        background-size: 20px;
+        transition: background-color 200ms;
+        -webkit-transition: background-color 200ms;
+        -moz-transition: background-color 200ms;
+        -o-transition: background-color 200ms; }
+        #header .header-inner .action ul li > button.unmaximize, #header .header-inner .action ul li > button.maximize {
+          background-size: 16px; }
+        #header .header-inner .action ul li > button.minimize {
+          background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 256H112" /></svg>'); }
+        #header .header-inner .action ul li > button.unmaximize {
+          background-image: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="48" y="64" width="416" height="384" rx="48" ry="48" fill="none" stroke="rgb(148, 154, 167)" stroke-linejoin="round" stroke-width="32"/><path d="M397.82 64H114.18C77.69 64 48 94.15 48 131.2V176h16c0-16 16-32 32-32h320c16 0 32 16 32 32h16v-44.8c0-37.05-29.69-67.2-66.18-67.2z" fill="rgb(148, 154, 167)"/></svg>'); }
+        #header .header-inner .action ul li > button.maximize {
+          background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 448H96a32.09 32.09 0 01-32-32V96a32.09 32.09 0 0132-32h320a32.09 32.09 0 0132 32v320a32.09 32.09 0 01-32 32z" fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>'); }
+        #header .header-inner .action ul li > button.quit {
+          background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>'); }
+        #header .header-inner .action ul li > button:hover {
+          color: white;
+          background-color: var(--app-active); }
+          #header .header-inner .action ul li > button:hover.minimize {
+            background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 256H112" /></svg>'); }
+          #header .header-inner .action ul li > button:hover.unmaximize {
+            background-image: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="48" y="64" width="416" height="384" rx="48" ry="48" fill="none" stroke="rgb(255, 255, 255)" stroke-linejoin="round" stroke-width="32"/><path d="M397.82 64H114.18C77.69 64 48 94.15 48 131.2V176h16c0-16 16-32 32-32h320c16 0 32 16 32 32h16v-44.8c0-37.05-29.69-67.2-66.18-67.2z" fill="rgb(255, 255, 255)"/></svg>'); }
+          #header .header-inner .action ul li > button:hover.maximize {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 448H96a32.09 32.09 0 01-32-32V96a32.09 32.09 0 0132-32h320a32.09 32.09 0 0132 32v320a32.09 32.09 0 01-32 32z" fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>'); }
+          #header .header-inner .action ul li > button:hover.quit {
+            background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>'); }
+
+/*# sourceMappingURL=app.css.map */

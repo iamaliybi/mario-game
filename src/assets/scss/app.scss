@@ -1,0 +1,59 @@
+@import "utils/mixin";
+
+:root {
+	--app-background: rgb(44, 49, 60);
+	--app-border: rgb(52, 59, 72);
+	--app-active: rgb(79, 159, 238);
+	--app-content: rgb(148, 154, 167);
+	--app-primary: rgb(39, 44, 54);
+	--app-primary-dark: rgb(27, 29, 35);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	direction: ltr;
+	background-color: var(--app-background);
+	color: var(--app-content);
+	overflow: hidden;
+	max-width: 100vw;
+	max-height: 100vh;
+	font-size: 1.4rem;
+	font-family: "Poppins", "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+ul {
+	font-size: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border-color: transparent;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+a,
+input,
+textarea,
+button {
+	outline: none;
+}
+
+@import "header";

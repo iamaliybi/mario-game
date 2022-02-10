@@ -1,0 +1,60 @@
+{
+	"name": "super-mario",
+	"productName": "Super Mario",
+	"version": "1.0.0",
+	"description": "A simple game by electron",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make-mac": "electron-forge make --platform darwin",
+		"make-linux": "electron-forge make --platform linux --targets deb",
+		"publish": "electron-forge publish",
+		"sass": "sass --watch src/assets/scss:src/assets/css"
+	},
+	"keywords": [],
+	"author": {
+		"name": "Ali Yaghoubi",
+		"email": "dev.edwardjoseph@gmail.com"
+	},
+	"license": "MIT",
+	"config": {
+		"forge": {
+			"packagerConfig": {
+				"icon": "./assets/icon.png"
+			},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-dmg",
+					"config": {
+						"icon": "./asset/icon.png"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {
+						"icon": "./asset/icon.png"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"iconUrl": "./asset/icon.png"
+					}
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"electron-squirrel-startup": "^1.0.0"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.0.0-beta.63",
+		"@electron-forge/maker-deb": "^6.0.0-beta.63",
+		"@electron-forge/maker-dmg": "^6.0.0-beta.63",
+		"@electron-forge/maker-rpm": "^6.0.0-beta.63",
+		"@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+		"@electron-forge/maker-zip": "^6.0.0-beta.63",
+		"electron": "16.0.8"
+	}
+}

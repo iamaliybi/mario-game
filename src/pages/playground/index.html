@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Super Mario</title>
+	<link rel="stylesheet" href="../../assets/css/app.css" />
+	<link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+	<header id="header">
+		<div class="header-inner">
+			<div class="title">
+				<h1 id="appTitle"></h1>
+			</div>
+			<div class="moveable"></div>
+			<div class="action">
+				<ul>
+					<li><button id="minimizeBtn" type="button" class="minimize" title="Minimize"></button></li>
+					<li><button id="restoreBtn" type="button" class="unmaximize" title="Restore"></button></li>
+					<li><button id="quitBtn" type="button" class="quit" title="Close"></button></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main>
+		<canvas id="playground"></canvas>
+	</main>
+	<script src="playground.js"></script>
+	<script src="loader.js"></script>
+</body>
+
+</html>

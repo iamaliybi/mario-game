@@ -1,0 +1,84 @@
+#header {
+	background-color: var(--app-primary);
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 48px;
+		padding: 0 0 0 16px;
+
+		.title > h1 {
+			font: {
+				size: 14px;
+				weight: 500;
+			}
+		}
+
+		.moveable {
+			flex: 1;
+			height: 100%;
+			cursor: default;
+			-webkit-app-region: drag;
+			&:active {
+				cursor: grabbing;
+			}
+		}
+
+		.action {
+			ul {
+				display: flex;
+
+				li > button {
+					width: 48px;
+					height: 48px;
+					color: var(--app-content);
+					background: transparent scroll no-repeat center;
+					background-size: 20px;
+					@include transition(background-color 200ms);
+
+					&.unmaximize, &.maximize {
+						background-size: 16px;
+					}
+
+					&.minimize {
+						background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 256H112" /></svg>');
+					}
+
+					&.unmaximize {
+						background-image: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="48" y="64" width="416" height="384" rx="48" ry="48" fill="none" stroke="rgb(148, 154, 167)" stroke-linejoin="round" stroke-width="32"/><path d="M397.82 64H114.18C77.69 64 48 94.15 48 131.2V176h16c0-16 16-32 32-32h320c16 0 32 16 32 32h16v-44.8c0-37.05-29.69-67.2-66.18-67.2z" fill="rgb(148, 154, 167)"/></svg>');
+					}
+
+					&.maximize {
+						background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 448H96a32.09 32.09 0 01-32-32V96a32.09 32.09 0 0132-32h320a32.09 32.09 0 0132 32v320a32.09 32.09 0 01-32 32z" fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>');
+					}
+
+					&.quit {
+						background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(148, 154, 167)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>');
+					}
+
+					&:hover {
+						color: rgb(255, 255, 255);
+						background-color: var(--app-active);
+
+						&.minimize {
+							background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 256H112" /></svg>');
+						}
+	
+						&.unmaximize {
+							background-image: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect x="48" y="64" width="416" height="384" rx="48" ry="48" fill="none" stroke="rgb(255, 255, 255)" stroke-linejoin="round" stroke-width="32"/><path d="M397.82 64H114.18C77.69 64 48 94.15 48 131.2V176h16c0-16 16-32 32-32h320c16 0 32 16 32 32h16v-44.8c0-37.05-29.69-67.2-66.18-67.2z" fill="rgb(255, 255, 255)"/></svg>');
+						}
+	
+						&.maximize {
+							background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 448H96a32.09 32.09 0 01-32-32V96a32.09 32.09 0 0132-32h320a32.09 32.09 0 0132 32v320a32.09 32.09 0 01-32 32z" fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>');
+						}
+	
+						&.quit {
+							background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>');
+						}
+					}
+				}
+			}
+		}
+	}
+}
